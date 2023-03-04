@@ -4,11 +4,18 @@
 
 Yang Perlu diinstall
 
-### 1.1. NodeJS
+#### 1.1. NodeJS
 
-### 1.2. Visual Studio Code
+Bisa didownload pada https://nodejs.org/en/download/
 
-### 1.3. Visual Studio Code Extesion
+Untuk windows pilih versi windows Installer (.MSI) 64 bit secara umum dan 32 bit apabila menggunakan windows 32 bit
+
+#### 1.2. Visual Studio Code
+Bisa didownload pada https://code.visualstudio.com/Download sesuaikan dengan sisetem anda
+
+#### 1.3. Visual Studio Code Extesion
+1. Web Dev
+2. Front-End React Pack
 
 ## 2.Membuat Project React Baru
 
