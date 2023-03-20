@@ -216,7 +216,7 @@ Pada Command Prompt (Baik CMD/Powersehll/Terminal VS Code) pastikan mengarah ke 
 
 setelah itu buatlah sebuah project react baru dengan menggunakan perintah **npx create-react-app nama-project** contohya :
 
-`npx create-react-app pertemuan01`
+`npx create-react-app pertemuan05`
 
 setelah itu buka Visual Studio Code dan pada Menu File > Open Folder pilih folder project yang telah dibuat sebelumnya.
 
