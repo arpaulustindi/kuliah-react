@@ -172,3 +172,105 @@ pastikan terminal Anda berada pada root project **pertemuan03** kemudian jalanka
 dengan hasil sebagai berikut ini
 
 ![](assets/20230307_232627_03_01.png)
+
+# Pertemuan 4
+
+## 1. Buat Folder Project
+
+Buat sebuah folder project dengan nama **pertemuan04**
+
+## 2. Index
+
+Kemudian dalam folder tersebut buatlah sebuah file dengan nama **index.html** dan ketikan kode berikut ini
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex</title>
+  </head>
+  <body>
+<label for="">Nama :</label>
+  <br>
+   <input type="text"/>
+   <img src="assets/image/sofia.png"/>
+  </body>
+</html>
+
+```
+
+### 3. Run Live Preivew
+
+Tekan **ctrl** + **shif** + **p** kemudian pilih preview
+
+# Pertemuan 5
+
+# 1. Buat Project React Baru
+
+Buat project react baru dengan perintah npx create-react-app pertemuan05
+
+Pada Command Prompt (Baik CMD/Powersehll/Terminal VS Code) pastikan mengarah ke alamat folder workspace (folder workspace menjadi folder root pada command prompt) contoh tampilan dalam command prompt `d:\kuliah-react>`
+
+setelah itu buatlah sebuah project react baru dengan menggunakan perintah **npx create-react-app nama-project** contohya :
+
+`npx create-react-app pertemuan01`
+
+setelah itu buka Visual Studio Code dan pada Menu File > Open Folder pilih folder project yang telah dibuat sebelumnya.
+
+setelah itu tampilkan terminal pada vscode. !!! PASTIKAN ALAMAT TERMINAL BERADA PADA ROOT FOLDER PROJECT YANG DIBUAT !!! contohnya
+
+`d:\kuliah-react\pertemuan05>
+
+Kemudian pada VS Code
+
+# 2. Install Tailwindcss, PostCSS, dan Autoprefixer
+
+Untuk tampilan kita akan menggunakan Tailwindcss. Pada ReactJs untuk dapat menggunakannya dengan baik perlu diinstall libreary tambahan berupa PostCSS dan Autoprefixer
+
+### 2.1 Install
+
+cara install Tailwindcss, PostCSS, dan Autoprefixer yaitu dengan mengetikan perintah `npm install -D tailwindcss postcss autoprefixer`
+
+### 2.2 Inisialisasi Tailwindcss
+
+cara konfigurasi Tailwindcss yaitu dengan menggunakan perintah `npx tailwindcss init -p` sehingga akan muncul file (digenerate otomatis) dengan nama **tailwind.config.js** pada root project
+
+### 2.3 Konfigurasi Tailwindcss
+
+Buka file **tailwind.config.js** kemudian konfigurasi code tersebut sehingga menjadi seperti berikut ini
+
+![](assets/20230321_010209_code1.png)
+
+### 2.4 Penambahan Directives
+
+Pada file **src/index.css** ubah code menjadi seperti ini
+
+![](assets/20230321_010523_code2.png)
+
+## 3. Membuat Komponen Card
+
+dalam folder src buat file dengan nama **Card.jsx** kemudian ketikkan code seperti ini
+
+![](assets/20230321_011059_code3.png)
+
+## 4. Konfigurasi index
+
+Kemudian lakukan konfigurasi dengan mengubah seluruh isi pada file **src/index.js** seperti code berikut ini
+
+![](assets/20230321_011352_code4.png)
+
+## 5. Run
+
+Kemudian run aplikasi dengan menjalankan perintah `npm start` dengan hasil pada browser seperti berikut ini
+
+
+![](assets/20230321_011719_hasil.png)
+
+
+
+## 6. Modifikasi
+
+Silahkan modifikasi Object Card.jsx dengan menambahkan data diri dan foto seperti data KTP (challenge pertemuan 04) kemudian run
