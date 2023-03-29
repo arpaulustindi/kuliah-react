@@ -266,11 +266,25 @@ Kemudian lakukan konfigurasi dengan mengubah seluruh isi pada file **src/index.j
 
 Kemudian run aplikasi dengan menjalankan perintah `npm start` dengan hasil pada browser seperti berikut ini
 
-
 ![](assets/20230321_011719_hasil.png)
-
-
 
 ## 6. Modifikasi
 
 Silahkan modifikasi Object Card.jsx dengan menambahkan data diri dan foto seperti data KTP (challenge pertemuan 04) kemudian run
+
+
+# Pertemuan 6
+
+Pertemuan 6 masih menggunakan project pada pertemuan 5.
+
+Yang perlu dilakukan adalah memodifikasi file Card.jsx menjadi seperti di bawah ini, dengan kode berikut ini :
+
+
+![](assets/20230329_215748_code06.png)
+
+
+
+kemudian aplikasinya dirunning sehingga tampilannya menjadi seperti di bawah ini :
+
+
+![](assets/20230329_215851_hasil06.png)
