@@ -2,7 +2,7 @@ function Card() {
   return (
     <>
       <div class="flex justify-center items-center h-screen w-full bg-gradient-to-r from-blue-500 to-purple-600">
-        <div class="w-1/2 bg-white rounded-lg shadow-2xl p-8 m-4">
+        <div class="backdrop-blur-md w-1/2 bg-white bg-opacity-25 rounded-lg shadow-2xl p-8 m-4">
           <h1 class="block w-full text-center text-gray-800 text-2xl font-bold mb-6">
             Registrasi
           </h1>
@@ -74,7 +74,7 @@ function Card() {
               </select>
             </div>
             <button
-              class="block bg-blue-400 hover:bg-blue-600 text-white uppercase text-lg mx-auto p-4 rounded"
+              class="block bg-blue-600 hover:bg-blue-00 text-white uppercase text-lg mx-auto p-4 rounded"
               type="submit"
             >
               Buat Akun
