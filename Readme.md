@@ -276,12 +276,10 @@ Silahkan modifikasi Object Card.jsx dengan menambahkan data diri dan foto sepert
 
 Pertemuan 6 masih menggunakan project pada pertemuan 5.
 
-Yang perlu dilakukan adalah memodifikasi file Card.jsx menjadi seperti di bawah ini, dengan kode berikut ini :
-
+Yang perlu dilakukan adalah memodifikasi file **Card.jsx** menjadi seperti di bawah ini, dengan kode berikut ini :
 
 ![](assets/20230329_223001_code061.png)
 
 kemudian aplikasinya dirunning sehingga tampilannya menjadi seperti di bawah ini :
-
 
 ![](assets/20230329_223028_jadi06.png)
