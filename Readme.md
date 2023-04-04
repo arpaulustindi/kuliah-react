@@ -790,3 +790,6 @@ reportWebVitals();
 ## Run Aplikasi
 
 Silahkan run aplikasi sehingga menjadi
+
+
+![](assets/20230404_141051_capture.gif)
