@@ -283,3 +283,510 @@ Yang perlu dilakukan adalah memodifikasi file **Card.jsx** menjadi seperti di ba
 kemudian aplikasinya dirunning sehingga tampilannya menjadi seperti di bawah ini :
 
 ![](assets/20230329_223028_jadi06.png)
+
+# Pertemuan 7-8
+
+## 1. Buat Project Baru
+
+silahkan buat project react baru menggunakan *create-react-app*
+
+## 2.Instalasi dan Konfigurasi Tailwindcss
+
+Lihat langkah pertemuan 5, bagian 2. Mulai dari 2.1 - 2.5
+
+## 3. Installasi React-Icons
+
+pada root folder project yang dibuat ketikkan perintah `npm install react-icons`
+
+## 4. Konfigurasi index.css
+
+konfigurasikan index.css yang berada dalam folder **src** sebagai menjadi seperti berikut
+
+```@tailwind base;
+@tailwind components;
+@tailwind utilities;html {
+scroll-behavior: smooth;
+}body {
+@apply text-lg
+}.projects img {
+width: 100%;
+}/* color */
+.bg-primary {
+background: #0F172A;
+}.bg-secondery {
+background: #1E293B;
+}.bg-accent {
+background: #7477FF;
+}.text-accent {
+color: #7477FF;
+}nav li a {
+@apply px-4 py-5 text-lg;
+}nav li a:hover {
+color: #7477FF;
+}.mobile-nav {
+@apply fixed block w-full h-full py-2 duration-500 bg-gray-900 md:hidden top-10;
+}/* hero */
+h1 {
+font-family: 'Pacifico', cursive;
+line-height: 1.5 !important;
+}
+```
+
+## 5. Gambar
+
+### 1. Buat Folder Assets
+
+buatlah folder dengan nama **assets** yang berada dalam folder **src**
+
+### 2. Download File Gambar
+
+Dowloadlah seluruh gambar yang ada pada link berikut https://github.com/arpaulustindi/kuliah-react/tree/master/pertemuan07-08/src/assets
+
+Jumlah gambar pada link tersebut adalah 8 gambar
+
+### 3. Include Gambar
+
+Hasil gambar yang didownload, kemudian dipindahkan ke dalam folder assets yang dibuat
+
+## 6. Components
+
+Dalam folder src, buatlah sebuah folder dengan nama **components**. Kemudian dalam folder tersebut silahkan buatlah komponen dengan nama dan syntax berikut
+
+### App.jsx
+
+```
+import Header from "./Header";
+import Hero from "./Hero";
+import About from "./About";
+import Projects from "./Projects";
+import Blog from "./Blog";
+import Contact from "./Contact";
+import Footer from "./Footer";
+
+function App() {
+  return (
+    <>
+      <Header />
+      <Hero />
+      <About />
+      <Projects />
+      <Blog />
+      <Contact />
+      <Footer />
+    </>
+  );
+}
+
+export default App;
+```
+
+### Header.jsx
+
+```import React, { useState } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+
+const Header = () => {
+    const [toggle, setToggle] = useState(false);
+
+    const handleToggle = () => setToggle(!toggle);
+
+    return (
+        <header className="fixed z-10 flex justify-between w-full px-5 py-2 text-white bg-primary">
+        <a href="/" className="text-2xl font-bold logo text-accent">
+            Arifin
+        </a>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:block">
+            <ul className="flex">
+            <li>
+                <a href="/#about">About</a>
+            </li>
+            <li>
+                <a href="/#projects">Projects</a>
+            </li>
+            <li>
+                <a href="/#blog">Blog</a>
+            </li>
+            <li>
+                <a href="/#contact">Contact</a>
+            </li>
+            <li>
+                <a href="#resume -link" target="_blank" without rel="noreferrer">
+                Resume
+                </a>
+            </li>
+            </ul>
+        </nav>
+
+        {/* Mobile Nav */}
+        <nav
+            className={!toggle ? "mobile-nav left-[-100%]" : "mobile-nav left-0"}
+        >
+            <ul className="flex flex-col">
+            <li>
+                <a href="/#about">About</a>
+            </li>
+            <li>
+                <a href="/#projects">Projects</a>
+            </li>
+            <li>
+                <a href="/#blog">Blog</a>
+            </li>
+            <li>
+                <a href="/#contact">Contact</a>
+            </li>
+            <li>
+                <a href="/#resume">Resume</a>
+            </li>
+            </ul>
+        </nav>
+
+        {/* Toggle button */}
+        <button onClick={handleToggle} className="block md:hidden">
+            {!toggle ? <AiOutlineMenu size={30} /> : <AiOutlineClose size={30} />}
+        </button>
+        </header>
+    );
+};
+
+export default Header;
+```
+
+### Hero.jsx
+
+```
+import React from "react";
+import HeroImg from "../assets/hero-img.png";
+
+    import {
+    AiOutlineTwitter,
+    AiOutlineYoutube,
+    AiOutlineFacebook,
+    } from "react-icons/ai";
+
+    const Hero = () => {
+    return (
+        <section className="px-5 py-32 text-white bg-primary">
+        <div className="container grid items-center justify-center mx-auto md:grid-cols-2 md:justify-between">
+            <div className="pb-5 hero-info md:pb-0">
+            <h1 className="text-4xl lg:text-6xl">
+                Hi, <br />I am <span className="text-accent">a</span>mrin <br />
+                Frontend Developer
+            </h1>
+
+            <p className="py-5">
+                I am proficient in JavaScript, React.js and Tailwind CSS
+            </p>
+
+            <div className="flex py-5 ">
+                <a
+                href="https://twitter.com/"
+                className="inline-block pr-4 text-accent hover:text-white"
+                >
+                {" "}
+                <AiOutlineTwitter size={40} />{" "}
+                </a>
+                <a
+                href="https://www.youtube.com/"
+                className="inline-block pr-4 text-accent hover:text-white"
+                >
+                {" "}
+                <AiOutlineYoutube size={40} />{" "}
+                </a>
+                <a
+                href="https://www.facebook.com/"
+                className="inline-block pr-4 text-accent hover:text-white"
+                >
+                {" "}
+                <AiOutlineFacebook size={40} />{" "}
+                </a>
+            </div>
+
+            <a
+                href="/#projects"
+                className=" btn bg-accent  border-2 border-[#7477FF] text-white px-6 py-3 hover:bg-transparent"
+            >
+                See Projects
+            </a>
+            </div>
+
+            <div className="hero-img">
+            <img
+                src={HeroImg}
+                alt="coding illustration"
+                className="lgw-[80%] ml-auto"
+            />
+            </div>
+        </div>
+        </section>
+    );
+};
+
+export default Hero;
+```
+
+### About.jsx
+
+```
+import React from "react";
+import AboutImg from "../assets/about-img.png";
+
+const About = () => {
+    return (
+        <section className="px-5 py-32 text-white bg-secondery" id="about">
+        <div className="container grid items-center justify-center mx-auto md:grid-cols-2 md:justify-between">
+            <div className="about-info">
+            <h2 className="text-4xl font-bold mb-5 border-b-[5px] w-[180px] border-indigo-600 pb-2">
+                About Me
+            </h2>
+
+            <p className="pb-5">
+                Hi, My Name Is Arifin Tindi. I am a
+                Frontend Developer. I build beautifull websites with React and
+                Tailwind CSS.
+            </p>
+            <p className="pb-5">
+                I am proficient in Frontend skills like React.js, Redux, Redux Tool
+                Kit, Axios, Tailwind CSS, SaSS, Css3 and many more.
+            </p>
+
+            <p>In backend I know Node.js, Express.js, MongoDB, and Mongoose</p>
+
+            <p>
+                In my spare time I create YouTube videos and write blogs on my Blog.
+                Where I talk about programming theory and build various projects.
+            </p>
+            </div>
+
+            <div className="about-img">
+            <img
+                src={AboutImg}
+                alt="coding illustration"
+                className="lgw-[80%] md:ml-auto"
+            />
+            </div>
+        </div>
+        </section>
+    );
+};
+
+export default About;
+```
+
+### Projects.jsx
+
+```
+import React from "react";
+import cssProjects from "../assets/cssprojects.png";
+import devlog from "../assets/devlog.png";
+import getInspirred from "../assets/get-inspirred.png";
+import uilogs from "../assets/uilogs.png";
+
+
+const Projects = () => {
+    const projects = [
+        {
+        img: devlog,
+        title: "devlog",
+        desc: " A multi author blog. Built with Node.js, MongoDB, React, Redux and Tailwind CSS ",
+        live: "https://github.com/arpaulustindi/kuliah-react",
+        code: "https://github.com/arpaulustindi/kuliah-react",
+        },
+        {
+        img: uilogs,
+        title: "uilogs",
+        desc: "Free website template directory for SaaS and Degital Agency. Built with Bootstrap, JQuery and JavaScript",
+        live: "https://github.com/arpaulustindi/kuliah-react",
+        code: "https://github.com/arpaulustindi/kuliah-react",
+        },
+        {
+        img: cssProjects,
+        title: "css projects",
+        desc: "Frontend Mentor challange directory, solved with vanilla CSS",
+        live: "https://github.com/arpaulustindi/kuliah-react",
+        code: "https://github.com/arpaulustindi/kuliah-react",
+        },
+        {
+        img: getInspirred,
+        title: "get Inspirred",
+        desc: "Quote search app. Used Quotable API for the quotes and React, Redux on the frontend",
+        live: "https://github.com/arpaulustindi/kuliah-react",
+        code: "https://github.com/arpaulustindi/kuliah-react",
+        },
+    ];
+
+    return (
+        <section className="px-5 py-32 text-white bg-primary" id="projects">
+            <div className="container grid items-center mx-auto md:grid-cols-2 md:justify-between">
+                <div className="mb-5 about-info">
+                <h2 className="text-4xl font-bold mb-5 border-b-[5px] w-[180px] border-indigo-600 pb-2">
+                    Projects
+                </h2>
+
+                <p className="pb-5">
+                    These are some of my best projects. I have built these with React,
+                    MERN and vanilla CSS. Check them out.
+                </p>
+                </div>
+
+                <div className="about-img"></div>
+            </div>
+
+            <div className="container grid gap-10 mx-auto projects md:grid-cols-3">
+                {projects.map((project, i) => {
+                return (
+                    <div className="relative" key={i}>
+                    <img src={project.img} alt={project.title} />
+                    <div className="flex absolute left-0 right-0 top-[13px] bottom-0 mx-auto w-[90%] h-[90%]  bg-primary  opacity-0 duration-500 justify-center flex-col hover:opacity-100 ">
+                        <p className="px-2 py-5 font-bold text-center text-white">
+                        {project.desc}
+                        </p>
+
+                        <div className="mx-auto">
+                        <a
+                            href={project.live}
+                            className="px-5 py-2 mr-5 font-bold bg-blue-500 hover:bg-blue-600"
+                        >
+                            Live
+                        </a>
+                        <a
+                            href={project.code}
+                            className="px-5 py-2 font-bold bg-blue-700 hover:bg-blue-800"
+                        >
+                            Code
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                );
+                })}
+            </div>
+        </section>
+        );
+    };
+
+    export default Projects;
+```
+
+### Blog.jsx
+
+```
+import React from "react";
+
+const Blog = () => {
+    const post = [
+        {
+        img: "https://res.cloudinary.com/practicaldev/image/fetch/s--AuZFJnr6--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/a8okx5rxzuh5fojibsy3.png",
+        title: "How to build a counter app with JavaScript",
+        url: "https://github.com/arpaulustindi/kuliah-react",
+        },
+        {
+        img: "https://res.cloudinary.com/practicaldev/image/fetch/s--FsJZ6lhI--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gv7y2de8kalk9l0820ag.jpg",
+        title: "JavaScript Ultimate Guide 02: The DOM",
+        url: "https://github.com/arpaulustindi/kuliah-react",
+        },
+    ];
+
+    return (
+        <section className="px-5 py-32 text-white bg-primary" id="blog">
+        <div className="container grid items-center mx-auto md:grid-cols-2 md:justify-between">
+            <div className="mb-5 about-info">
+            <h2 className="text-4xl font-bold mb-5 border-b-[5px] w-[100px] border-indigo-600 pb-2">
+                Blogs
+            </h2>
+
+            <p className="pb-5">Some of my best blogs.</p>
+            </div>
+
+            <div></div>
+        </div>
+
+        <div className="container grid gap-10 mx-auto projects md:grid-cols-2">
+            {post.map((item) => {
+            return (
+                <div>
+                <img src={item.img} alt={item.title} />
+                <h3 className="py-5 text-2xl">{item.title}</h3>
+                <a
+                    href={item.url}
+                    className=" btn bg-accent  border-2 border-[#7477FF] text-white px-6 py-3 hover:bg-transparent"
+                >
+                    Read More
+                </a>
+                </div>
+            );
+            })}
+        </div>
+        </section>
+    );
+};
+
+export default Blog;
+```
+
+### Contact.jsx
+
+```
+import React from "react";
+
+const Contact = () => {
+    return (
+        <section className="px-5 py-32 bg-secondery" id="contact">
+        <div className="text-center md:w-[60%] mx-auto text-white">
+            <h2 className="text-4xl font-bold mb-5 border-b-[5px] w-[200px] mx-auto border-indigo-600 pb-2">
+            Contact Me
+            </h2>
+            <p>
+            I am currently open for a fulltime Frontend Developer role. If you
+            want to discuss about that feel free to email me or call me.
+            </p>
+
+            <p className="py-2">
+            <span className="font-bold">Email:</span> paulustindi@gmail.com
+            </p>
+            <p className="py-2">
+            <span className="font-bold">Phone:</span> +62 813436xxxxx
+            </p>
+        </div>
+        </section>
+    );
+};
+
+export default Contact;
+```
+
+### Footer.jsx
+
+```
+import React from "react";
+
+const Footer = () => {
+    return <div className="py-4 text-center text-white bg-primary "> © 2023 arifintindi all right reserved</div>;
+};
+
+export default Footer;
+```
+
+## Setting Index.js
+
+kemudian pada file Index.js yang berada dalam folder src, silahkan modifikasi syntax menjadi
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './components/App';
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <App/>
+);
+
+reportWebVitals();
+```
+
+## Run Aplikasi
+
+Silahkan run aplikasi sehingga menjadi
