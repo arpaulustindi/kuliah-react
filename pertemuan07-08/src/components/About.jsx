@@ -11,7 +11,7 @@ const About = () => {
             </h2>
 
             <p className="pb-5">
-                Hi, My Name Is Rohima Akther everyone calls me Amrin. I am a
+                Hi, My Name Is Arifin Tindi. I am a
                 Frontend Developer. I build beautifull websites with React and
                 Tailwind CSS.
             </p>

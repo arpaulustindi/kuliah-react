@@ -23,21 +23,21 @@ import HeroImg from "../assets/hero-img.png";
 
             <div className="flex py-5 ">
                 <a
-                href="https://twitter.com/CoderAmrin"
+                href="https://twitter.com/"
                 className="inline-block pr-4 text-accent hover:text-white"
                 >
                 {" "}
                 <AiOutlineTwitter size={40} />{" "}
                 </a>
                 <a
-                href="https://www.youtube.com/@coderamrin"
+                href="https://www.youtube.com/"
                 className="inline-block pr-4 text-accent hover:text-white"
                 >
                 {" "}
                 <AiOutlineYoutube size={40} />{" "}
                 </a>
                 <a
-                href="https://www.facebook.com/CoderAmrin/"
+                href="https://www.facebook.com/"
                 className="inline-block pr-4 text-accent hover:text-white"
                 >
                 {" "}
